@@ -37,7 +37,7 @@ app.get('/', (req, res) => {
 });
 
 // Start the server
-const PORT = 3001;
+const PORT = process.env.PORT || 3001; // Use the PORT environment variable or default to 3001
 httpServer.listen(PORT, () => {
   console.log(`Listening on port ${PORT}`);
 });
